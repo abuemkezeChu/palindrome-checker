@@ -21,4 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
     return filteredString.join('') === reversedString.join('')
   };
 
+  //function to display thr results
+
+  const displayResult = () => {
+    const word = document.getElementById('word').value
+    const result = palindromeChecker(word) ? 'is a palindrome' : 'is not a palindrome'
+    display.textContent = `${word} ${result}`
+    display.style.fontSize = '2rem'
+  }
+
+  btn.addEventListener('click', displayResult)
+
 })
